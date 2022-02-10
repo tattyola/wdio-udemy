@@ -1,10 +1,15 @@
 exports.config = {
+    suites: {
+        debitCard: ['test/specs/uiControls.js', 'test/specs/uiControls.js'],
+        creditCard: ['test/specs/eCommerceE2E.js']
+    },
     specs: [
         './test/specs/**/*.js'
         // './test/specs/poECommerceE2E.js'
     ],
     exclude: [
         // 'path/to/excluded/files'
+        // 'test/specs/windowFrames.js'
     ],
     maxInstances: 3,
     capabilities: [
@@ -52,7 +57,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://rahulshettyacademy.com',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
