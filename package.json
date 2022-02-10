@@ -8,12 +8,14 @@
         "creditCardTests": "npx wdio run wdio.conf.js --suite creditCard",
         "debitCardTests": "npx wdio run wdio.conf.js --suite debitCard",
         "QARegression": "npx wdio run wdio.conf.js",
-        "UATRegression": "npx wdio run wdio.uat.conf.js"
+        "UATRegression": "npx wdio run wdio.uat.conf.js",
+        "generateReport": "allure generate allure-results --clean && allure open"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@wdio/allure-reporter": "^7.16.14",
         "@wdio/cli": "^7.16.14",
         "@wdio/local-runner": "^7.16.14",
         "@wdio/mocha-framework": "^7.16.14",
