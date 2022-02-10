@@ -37,6 +37,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'silent',
+
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
@@ -74,6 +75,11 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        // disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false ,
+    }]],
     // Hooks
     // before: function (capabilities, specs) {
     // },
@@ -87,8 +93,11 @@ exports.config = {
     // },
     // afterHook: function (test, context, { error, result, duration, passed, retries }) {
     // },
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            browser.takeScreenshot();
+        }
+    },
     // afterSuite: function (suite) {
     // },
     // afterCommand: function (commandName, args, result, error) {
