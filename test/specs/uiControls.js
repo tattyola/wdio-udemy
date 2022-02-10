@@ -1,8 +1,9 @@
 const expectChai = require('chai').expect
 
 describe('Ecomerce application', function () {
-    it('UI controls', function () {
-        browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
+
+    it('UI controls Sanity', function () {
+        browser.url('/loginpagePractise/#');
         $('#username').setValue('rahulshettyacademy')
         $('#password').setValue('learning')
 
@@ -35,8 +36,8 @@ describe('Ecomerce application', function () {
         expectChai(dropdown.getValue()).to.eq('stud')
     });
 
-    it('Dynamic dropdown controls', function () {
-        browser.url('https://rahulshettyacademy.com/AutomationPractice/')
+    it('Dynamic dropdown controls Smoke', function () {
+        browser.url('/AutomationPractice/')
         $('#autocomplete').setValue('ind')
         browser.pause(3000)
         let items = $$('[class="ui-menu-item"] div')
@@ -50,8 +51,8 @@ describe('Ecomerce application', function () {
         browser.pause(3000)
     });
 
-    it('Checkbox identification', function () {
-        browser.url('https://rahulshettyacademy.com/AutomationPractice/')
+    it('Checkbox identification Smoke', function () {
+        browser.url('/AutomationPractice/')
         const element = $$('[type="checkbox"]')
         element[1].click()
         console.log(element[1].isSelected()) // true

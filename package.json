@@ -5,7 +5,10 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "wdio": "wdio run wdio.conf.js"
+        "creditCardTests": "npx wdio run wdio.conf.js --suite creditCard",
+        "debitCardTests": "npx wdio run wdio.conf.js --suite debitCard",
+        "QARegression": "npx wdio run wdio.conf.js",
+        "UATRegression": "npx wdio run wdio.uat.conf.js"
     },
     "keywords": [],
     "author": "",

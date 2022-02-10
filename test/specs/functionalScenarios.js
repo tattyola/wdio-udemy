@@ -2,7 +2,7 @@ const expectChai = require('chai').expect
 
 describe('Functional testing on application', function () {
     it('Scrolling and Mouse hoover', function () {
-        browser.url('https://rahulshettyacademy.com/AutomationPractice/')
+        browser.url('/AutomationPractice/')
         $('#mousehover').scrollIntoView()
         browser.pause(3000)
         $('#mousehover').moveTo()
@@ -24,8 +24,8 @@ describe('Functional testing on application', function () {
         browser.pause(3000)
     });
 
-    it('Web tables Sort navigations', function () {
-        browser.url('https://rahulshettyacademy.com/seleniumPractise/#/offers')
+    it('Web tables Sort navigations Smoke', function () {
+        browser.url('/seleniumPractise/#/offers')
         $('tr th:nth-child(1)').click() // '//tr/th[1]'
 
         const veggiesLocators = $$('tr td:nth-child(1)')
@@ -38,7 +38,7 @@ describe('Functional testing on application', function () {
     });
 
     it('Web tables Filter navigations', function () {
-        browser.url('https://rahulshettyacademy.com/seleniumPractise/#/offers')
+        browser.url('/seleniumPractise/#/offers')
         $('#search-field').setValue('tomato')
         const veggiesLocators = $$('tr td:nth-child(1)')
         expect(veggiesLocators).toBeElementsArrayOfSize({eq:1})

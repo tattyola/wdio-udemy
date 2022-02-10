@@ -1,7 +1,9 @@
 
 describe('Ecomerce application', function () {
-    it('Login success', function () {
-        browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
+
+    it('Login success Smoke', function () {
+        this.retries(2)
+        browser.url('/loginpagePractise/#');
         console.log(browser.getTitle());
         browser.pause(3000);
         expect(browser).toHaveTitleContaining('LoginPage Practise | Rahul Shetty Academy')
@@ -15,8 +17,8 @@ describe('Ecomerce application', function () {
         expect(browser).toHaveUrlContaining('shop')
     });
 
-    it('Login fail', function () {
-        browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
+    it('Login fail Smoke', function () {
+        browser.url('/loginpagePractise/#');
         console.log(browser.getTitle());
         browser.pause(3000);
         expect(browser).toHaveTitleContaining('LoginPage Practise | Rahul Shetty Academy')
@@ -29,6 +31,5 @@ describe('Ecomerce application', function () {
         console.log($('//div[@class="alert alert-danger col-md-12"]').getText() + ' is the text I am seeing on the screen')
         console.log($('p[class="text-center text-white"]').getText())
         expect($('p[class="text-center text-white"]')).toHaveTextContaining('(username is rahulshettyacademy and Password is learning)')
-
     });
 });
