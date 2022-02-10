@@ -1,6 +1,6 @@
 
 describe('Ecomerce application', function () {
-    xit('Login success', function () {
+    it('Login success', function () {
         browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
         console.log(browser.getTitle());
         browser.pause(3000);
@@ -15,7 +15,7 @@ describe('Ecomerce application', function () {
         expect(browser).toHaveUrlContaining('shop')
     });
 
-    xit('Login fail', function () {
+    it('Login fail', function () {
         browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
         console.log(browser.getTitle());
         browser.pause(3000);
