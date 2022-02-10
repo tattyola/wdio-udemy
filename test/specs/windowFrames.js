@@ -1,5 +1,5 @@
 describe('Window and Frames', function () {
-    xit('Parent and Child window switch', function () {
+    it('Parent and Child window switch', function () {
         browser.url('https://rahulshettyacademy.com/AutomationPractice/')
         $('#openwindow').click()
         let handles = browser.getWindowHandles()
@@ -29,6 +29,6 @@ describe('Window and Frames', function () {
         console.log($$('a').length)
         browser.switchToFrame(null)
         console.log($$('a').length)
- 
+
     });
 });

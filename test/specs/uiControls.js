@@ -1,7 +1,7 @@
 const expectChai = require('chai').expect
 
 describe('Ecomerce application', function () {
-    xit('UI controls', function () {
+    it('UI controls', function () {
         browser.url('https://rahulshettyacademy.com/loginpagePractise/#');
         $('#username').setValue('rahulshettyacademy')
         $('#password').setValue('learning')
@@ -35,7 +35,7 @@ describe('Ecomerce application', function () {
         expectChai(dropdown.getValue()).to.eq('stud')
     });
 
-    xit('Dynamic dropdown controls', function () {
+    it('Dynamic dropdown controls', function () {
         browser.url('https://rahulshettyacademy.com/AutomationPractice/')
         $('#autocomplete').setValue('ind')
         browser.pause(3000)
@@ -50,7 +50,7 @@ describe('Ecomerce application', function () {
         browser.pause(3000)
     });
 
-    xit('Checkbox identification', function () {
+    it('Checkbox identification', function () {
         browser.url('https://rahulshettyacademy.com/AutomationPractice/')
         const element = $$('[type="checkbox"]')
         element[1].click()

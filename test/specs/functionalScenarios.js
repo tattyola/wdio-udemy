@@ -1,7 +1,7 @@
 const expectChai = require('chai').expect
 
 describe('Functional testing on application', function () {
-    xit('Scrolling and Mouse hoover', function () {
+    it('Scrolling and Mouse hoover', function () {
         browser.url('https://rahulshettyacademy.com/AutomationPractice/')
         $('#mousehover').scrollIntoView()
         browser.pause(3000)
@@ -12,7 +12,7 @@ describe('Functional testing on application', function () {
 
     });
 
-    xit('Double clicking and handling alerts', function () {
+    it('Double clicking and handling alerts', function () {
         browser.url('http://only-testing-blog.blogspot.com/')
         $('button').doubleClick() // flaky test
         browser.pause(5000)
@@ -24,7 +24,7 @@ describe('Functional testing on application', function () {
         browser.pause(3000)
     });
 
-    xit('Web tables Sort navigations', function () {
+    it('Web tables Sort navigations', function () {
         browser.url('https://rahulshettyacademy.com/seleniumPractise/#/offers')
         $('tr th:nth-child(1)').click() // '//tr/th[1]'
 
@@ -37,7 +37,7 @@ describe('Functional testing on application', function () {
         expectChai(originalVeggiesNames).to.eql(sortedVeggies) // verify that array is sorted
     });
 
-    xit('Web tables Filter navigations', function () {
+    it('Web tables Filter navigations', function () {
         browser.url('https://rahulshettyacademy.com/seleniumPractise/#/offers')
         $('#search-field').setValue('tomato')
         const veggiesLocators = $$('tr td:nth-child(1)')
