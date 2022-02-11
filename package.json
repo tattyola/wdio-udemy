@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "wdio ./wdio.conf.js",
         "creditCardTests": "npx wdio run wdio.conf.js --suite creditCard",
         "debitCardTests": "npx wdio run wdio.conf.js --suite debitCard",
         "QARegression": "npx wdio run wdio.conf.js",
